@@ -27,6 +27,38 @@ export default function PricingPage() {
         </div>
 
         <PricingCards />
+
+        <section className="max-w-4xl mx-auto px-4 mt-20">
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">Can I change plans later?</h3>
+              <p className="text-sm text-gray-600">
+                Yes. You can upgrade or downgrade any time, and billing updates on your next cycle.
+              </p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">Is there a contract?</h3>
+              <p className="text-sm text-gray-600">
+                No long-term contracts. Paid plans are subscription based and can be canceled anytime.
+              </p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">How secure is payment?</h3>
+              <p className="text-sm text-gray-600">
+                All payments are handled by Stripe over secure, PCI-compliant checkout.
+              </p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">What happens on the free plan?</h3>
+              <p className="text-sm text-gray-600">
+                The free plan skips payment and takes users directly to sign-up.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

@@ -48,6 +48,13 @@ Required variables:
 - `ADMIN_PASSWORD`
 - `STRIPE_SECRET_KEY`
 
+Optional (recommended for production subscriptions):
+
+- `STRIPE_PRICE_PREMIUM_MONTHLY`
+- `STRIPE_PRICE_PREMIUM_YEARLY`
+- `STRIPE_PRICE_BUSINESS_MONTHLY`
+- `STRIPE_PRICE_BUSINESS_YEARLY`
+
 ## Repository Notes
 
 - `.env.local` is ignored and must never be committed.

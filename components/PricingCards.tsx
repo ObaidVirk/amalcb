@@ -2,84 +2,35 @@
 
 import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+import { PRICING_PLANS, type BillingCycle, type PricingPlan } from '@/lib/pricing';
 
 const stripePublishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
 const stripePromise = stripePublishableKey ? loadStripe(stripePublishableKey) : null;
 
-interface Plan {
-  name: string;
-  price: number; // USD per month
-  amount: number; // cents
-  interval: 'month' | 'year' | null;
-  description: string;
-  features: string[];
-  cta: string;
-  highlighted: boolean;
-  tag?: string;
+function formatPrice(plan: PricingPlan, billingCycle: BillingCycle) {
+  const amount = plan.prices[billingCycle].amount;
+  if (amount === 0) return 'Free';
+
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  }).format(amount / 100);
 }
 
-const plans: Plan[] = [
-  {
-    name: 'Basic',
-    price: 0,
-    amount: 0,
-    interval: null,
-    description: 'Essential banking for individuals getting started.',
-    features: [
-      'Free current account',
-      'Debit card included',
-      'Mobile & online banking',
-      'Up to 5 free transfers/month',
-      'Basic customer support',
-    ],
-    cta: 'Get Started Free',
-    highlighted: false,
-  },
-  {
-    name: 'Premium',
-    price: 9,
-    amount: 900,
-    interval: 'month',
-    description: 'The full AmalCB experience for everyday banking.',
-    features: [
-      'Everything in Basic',
-      'Unlimited transfers',
-      'Priority support 24/7',
-      'Free international transfers',
-      'Cashback on purchases',
-      'Dedicated relationship manager',
-    ],
-    cta: 'Subscribe — $9/mo',
-    highlighted: true,
-    tag: 'Most Popular',
-  },
-  {
-    name: 'Business',
-    price: 29,
-    amount: 2900,
-    interval: 'month',
-    description: 'Advanced tools for businesses and entrepreneurs.',
-    features: [
-      'Everything in Premium',
-      'Business current account',
-      'Multi-user access',
-      'Payroll management',
-      'Advanced analytics & reports',
-      'Dedicated business advisor',
-    ],
-    cta: 'Subscribe — $29/mo',
-    highlighted: false,
-  },
-];
-
 export default function PricingCards() {
+  const [billingCycle, setBillingCycle] = useState<BillingCycle>('monthly');
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
   const [error, setError] = useState('');
 
-  async function handleCheckout(plan: Plan) {
-    if (plan.amount === 0) return; // free plan — no checkout
+  async function handleCheckout(plan: PricingPlan) {
+    if (plan.prices[billingCycle].amount === 0) {
+      window.location.href = '/signup';
+      return;
+    }
+
     setError('');
-    setLoadingPlan(plan.name);
+    setLoadingPlan(plan.id);
 
     try {
       if (!stripePromise) {
@@ -91,9 +42,8 @@ export default function PricingCards() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          planName: plan.name,
-          amount: plan.amount,
-          interval: plan.interval,
+          planId: plan.id,
+          billingCycle,
         }),
       });
 
@@ -120,6 +70,34 @@ export default function PricingCards() {
 
   return (
     <div className="max-w-6xl mx-auto px-4">
+      <div className="flex justify-center mb-8">
+        <div className="inline-flex p-1 rounded-xl bg-white border border-gray-200 shadow-sm">
+          <button
+            onClick={() => setBillingCycle('monthly')}
+            className={`px-5 py-2 text-sm font-semibold rounded-lg transition-colors ${
+              billingCycle === 'monthly'
+                ? 'bg-red-600 text-white'
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Monthly
+          </button>
+          <button
+            onClick={() => setBillingCycle('yearly')}
+            className={`px-5 py-2 text-sm font-semibold rounded-lg transition-colors ${
+              billingCycle === 'yearly'
+                ? 'bg-red-600 text-white'
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Yearly
+            <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">
+              Save 2 months
+            </span>
+          </button>
+        </div>
+      </div>
+
       {error && (
         <p className="text-center text-red-600 text-sm font-medium mb-6 bg-red-50 border border-red-200 rounded-lg py-3 px-4 max-w-md mx-auto">
           {error}
@@ -127,9 +105,9 @@ export default function PricingCards() {
       )}
 
       <div className="grid md:grid-cols-3 gap-8 items-start">
-        {plans.map((plan) => (
+        {PRICING_PLANS.map((plan) => (
           <div
-            key={plan.name}
+            key={plan.id}
             className={`relative bg-white rounded-2xl border overflow-hidden flex flex-col transition-shadow hover:shadow-xl ${
               plan.highlighted
                 ? 'border-red-500 shadow-lg shadow-red-100 scale-105'
@@ -153,10 +131,12 @@ export default function PricingCards() {
               </p>
               <div className="flex items-end gap-1">
                 <span className={`text-5xl font-black ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
-                  {plan.price === 0 ? 'Free' : `$${plan.price}`}
+                  {formatPrice(plan, billingCycle)}
                 </span>
-                {plan.price > 0 && (
-                  <span className={`text-sm mb-2 ${plan.highlighted ? 'text-red-200' : 'text-gray-400'}`}>/month</span>
+                {plan.prices[billingCycle].amount > 0 && (
+                  <span className={`text-sm mb-2 ${plan.highlighted ? 'text-red-200' : 'text-gray-400'}`}>
+                    /{billingCycle === 'monthly' ? 'month' : 'year'}
+                  </span>
                 )}
               </div>
             </div>
@@ -179,18 +159,22 @@ export default function PricingCards() {
             <div className="px-8 pb-8">
               <button
                 onClick={() => handleCheckout(plan)}
-                disabled={loadingPlan === plan.name}
+                disabled={loadingPlan === plan.id}
                 className={`w-full py-3 rounded-xl font-semibold text-sm transition-all disabled:opacity-60 disabled:cursor-not-allowed ${
                   plan.highlighted
                     ? 'bg-red-600 hover:bg-red-700 text-white shadow-md'
-                    : plan.price === 0
+                    : plan.prices[billingCycle].amount === 0
                     ? 'bg-gray-100 hover:bg-gray-200 text-gray-800'
                     : 'bg-gray-900 hover:bg-gray-800 text-white'
                 }`}
               >
-                {loadingPlan === plan.name ? 'Redirecting to Stripe…' : plan.cta}
+                {loadingPlan === plan.id
+                  ? 'Redirecting to Stripe...'
+                  : plan.prices[billingCycle].amount === 0
+                  ? 'Get Started Free'
+                  : `${plan.cta} - ${formatPrice(plan, billingCycle)}/${billingCycle === 'monthly' ? 'mo' : 'yr'}`}
               </button>
-              {plan.price > 0 && (
+              {plan.prices[billingCycle].amount > 0 && (
                 <p className="text-center text-xs text-gray-400 mt-2">
                   Secure payment via Stripe · Cancel anytime
                 </p>

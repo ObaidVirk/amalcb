@@ -21,6 +21,7 @@ const navLinks: Array<TranslatedNavLink | StaticNavLink> = [
   { key: 'home' as const, href: '/' },
   { label: 'Personal Banking', href: '/personal-banking' },
   { label: 'Business Banking', href: '/business-banking' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Loans', href: '/loans' },
   { label: 'Cards', href: '/cards' },
   { key: 'about' as const, href: '/about' },
@@ -122,6 +123,12 @@ export default function Navbar() {
             ) : (
               <>
                 <Link
+                  href="/pricing"
+                  className="px-4 py-1.5 text-sm font-semibold text-red-700 border border-red-200 rounded-md hover:bg-red-50 transition-colors"
+                >
+                  Pricing
+                </Link>
+                <Link
                   href="/login"
                   className="px-4 py-1.5 text-sm font-semibold text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
                 >
@@ -177,6 +184,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <>
+                  <Link href="/pricing" onClick={() => setMenuOpen(false)} className="text-sm font-semibold text-red-700 border border-red-200 rounded-md py-2 px-4 hover:bg-red-50 text-center">Pricing</Link>
                   <Link href="/login" onClick={() => setMenuOpen(false)} className="text-sm font-semibold text-gray-700 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-50 text-center">{t.nav.login}</Link>
                   <Link href="/signup" onClick={() => setMenuOpen(false)} className="text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded-md py-2 px-4 text-center">{t.nav.signup}</Link>
                 </>
