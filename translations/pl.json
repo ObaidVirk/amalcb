@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Usługi",
+    "pricing": "Cennik",
+    "contact": "Kontakt",
+    "login": "Zaloguj się",
+    "signup": "Zarejestruj się",
+    "dashboard": "Panel"
+  },
+  "hero": {
+    "headline": "Bankowość, która idzie z Tobą",
+    "subheadline": "Doświadcz przyszłości bankowości z AmalCB — zaawansowane narzędzia cyfrowe, konkurencyjne stawki i spersonalizowana obsługa.",
+    "cta": "Otwórz konto"
+  },
+  "auth": {
+    "email": "Adres e-mail",
+    "password": "Hasło",
+    "login": "Zaloguj się",
+    "forgotPassword": "Zapomniałeś hasła?",
+    "name": "Imię i nazwisko",
+    "confirmPassword": "Potwierdź hasło",
+    "signup": "Utwórz konto"
+  }
+}

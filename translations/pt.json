@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre Nós",
+    "services": "Serviços",
+    "pricing": "Preços",
+    "contact": "Contato",
+    "login": "Entrar",
+    "signup": "Cadastrar",
+    "dashboard": "Painel"
+  },
+  "hero": {
+    "headline": "O Banco que Cresce com Você",
+    "subheadline": "Experimente o futuro do banking com AmalCB — ferramentas digitais poderosas, taxas competitivas e atendimento personalizado.",
+    "cta": "Abrir uma Conta"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Senha",
+    "login": "Entrar",
+    "forgotPassword": "Esqueceu a senha?",
+    "name": "Nome Completo",
+    "confirmPassword": "Confirmar Senha",
+    "signup": "Criar Conta"
+  }
+}

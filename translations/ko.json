@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "services": "서비스",
+    "pricing": "요금제",
+    "contact": "문의",
+    "login": "로그인",
+    "signup": "회원가입",
+    "dashboard": "대시보드"
+  },
+  "hero": {
+    "headline": "당신과 함께하는 뱅킹",
+    "subheadline": "AmalCB로 미래의 뱅킹을 경험하세요 — 강력한 디지털 도구, 경쟁력 있는 금리, 개인화된 서비스.",
+    "cta": "계좌 개설하기"
+  },
+  "auth": {
+    "email": "이메일",
+    "password": "비밀번호",
+    "login": "로그인",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "name": "성명",
+    "confirmPassword": "비밀번호 확인",
+    "signup": "계정 만들기"
+  }
+}

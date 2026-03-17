@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "pricing": "Fiyatlandırma",
+    "contact": "İletişim",
+    "login": "Giriş Yap",
+    "signup": "Kayıt Ol",
+    "dashboard": "Kontrol Paneli"
+  },
+  "hero": {
+    "headline": "Sizinle Hareket Eden Bankacılık",
+    "subheadline": "AmalCB ile bankacılığın geleceğini deneyimleyin — güçlü dijital araçlar, rekabetçi oranlar ve kişiselleştirilmiş hizmet.",
+    "cta": "Hesap Aç"
+  },
+  "auth": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "login": "Giriş Yap",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "name": "Ad Soyad",
+    "confirmPassword": "Şifreyi Onayla",
+    "signup": "Hesap Oluştur"
+  }
+}

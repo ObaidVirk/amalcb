@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "Over Ons",
+    "services": "Diensten",
+    "pricing": "Prijzen",
+    "contact": "Contact",
+    "login": "Inloggen",
+    "signup": "Registreren",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "headline": "Bankieren dat met U Meebeweegt",
+    "subheadline": "Ervaar de toekomst van bankieren met AmalCB — krachtige digitale tools, concurrerende tarieven en persoonlijke service.",
+    "cta": "Open een Rekening"
+  },
+  "auth": {
+    "email": "E-mailadres",
+    "password": "Wachtwoord",
+    "login": "Inloggen",
+    "forgotPassword": "Wachtwoord vergeten?",
+    "name": "Volledige Naam",
+    "confirmPassword": "Wachtwoord bevestigen",
+    "signup": "Account aanmaken"
+  }
+}

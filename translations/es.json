@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "dashboard": "Panel de Control"
+  },
+  "hero": {
+    "headline": "La Banca que se Mueve Contigo",
+    "subheadline": "Experimenta el futuro de la banca con AmalCB — herramientas digitales potentes, tarifas competitivas y servicio personalizado.",
+    "cta": "Abrir una Cuenta"
+  },
+  "auth": {
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "login": "Iniciar Sesión",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "name": "Nombre Completo",
+    "confirmPassword": "Confirmar Contraseña",
+    "signup": "Crear Cuenta"
+  }
+}

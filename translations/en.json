@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "headline": "Banking That Moves\nWith You",
+    "subheadline": "Experience the future of banking with AmalCB — powerful digital tools, competitive rates, and personalised service for individuals and businesses alike.",
+    "cta": "Open an Account"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Sign In",
+    "forgotPassword": "Forgot password?",
+    "name": "Full Name",
+    "confirmPassword": "Confirm Password",
+    "signup": "Create Account"
+  }
+}

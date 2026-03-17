@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "pricing": "Prezzi",
+    "contact": "Contatti",
+    "login": "Accedi",
+    "signup": "Registrati",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "headline": "La Banca che Cresce con Te",
+    "subheadline": "Scopri il futuro del banking con AmalCB — strumenti digitali potenti, tassi competitivi e servizio personalizzato.",
+    "cta": "Apri un Conto"
+  },
+  "auth": {
+    "email": "Indirizzo Email",
+    "password": "Password",
+    "login": "Accedi",
+    "forgotPassword": "Password dimenticata?",
+    "name": "Nome Completo",
+    "confirmPassword": "Conferma Password",
+    "signup": "Crea Account"
+  }
+}

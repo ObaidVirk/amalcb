@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "services": "Dịch vụ",
+    "pricing": "Bảng giá",
+    "contact": "Liên hệ",
+    "login": "Đăng nhập",
+    "signup": "Đăng ký",
+    "dashboard": "Bảng điều khiển"
+  },
+  "hero": {
+    "headline": "Ngân hàng đồng hành cùng bạn",
+    "subheadline": "Trải nghiệm tương lai ngân hàng với AmalCB — công cụ kỹ thuật số mạnh mẽ, lãi suất cạnh tranh và dịch vụ cá nhân hóa.",
+    "cta": "Mở tài khoản"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mật khẩu",
+    "login": "Đăng nhập",
+    "forgotPassword": "Quên mật khẩu?",
+    "name": "Họ và tên",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "signup": "Tạo tài khoản"
+  }
+}

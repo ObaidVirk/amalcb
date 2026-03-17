@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "services": "Leistungen",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "headline": "Banking, das mit Ihnen geht",
+    "subheadline": "Erleben Sie die Zukunft des Bankings mit AmalCB — leistungsstarke digitale Tools, wettbewerbsfähige Zinsen und persönlicher Service.",
+    "cta": "Konto eröffnen"
+  },
+  "auth": {
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "login": "Anmelden",
+    "forgotPassword": "Passwort vergessen?",
+    "name": "Vollständiger Name",
+    "confirmPassword": "Passwort bestätigen",
+    "signup": "Konto erstellen"
+  }
+}

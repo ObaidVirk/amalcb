@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "dashboard": "Tableau de Bord"
+  },
+  "hero": {
+    "headline": "La Banque qui Avance Avec Vous",
+    "subheadline": "Découvrez l'avenir de la banque avec AmalCB — des outils numériques puissants, des tarifs compétitifs et un service personnalisé.",
+    "cta": "Ouvrir un Compte"
+  },
+  "auth": {
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "login": "Se Connecter",
+    "forgotPassword": "Mot de passe oublié ?",
+    "name": "Nom Complet",
+    "confirmPassword": "Confirmer le Mot de Passe",
+    "signup": "Créer un Compte"
+  }
+}

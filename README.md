@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AmalCB Frontend
 
-## Getting Started
+AmalCB is a Next.js 14 banking frontend with public marketing pages, multilingual UI, customer auth screens, Stripe-powered pricing checkout, and an admin dashboard experience.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Stripe
+
+## Features
+
+- Responsive banking UI clone with branded marketing pages
+- Login and signup flows
+- Admin dashboard interface
+- Language selector with 20 translation files
+- Stripe checkout integration for paid plans
+
+## Setup
+
+Install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For a production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+Copy `.env.example` to `.env.local` and fill in your own values before running the app.
 
-To learn more about Next.js, take a look at the following resources:
+Use server-only variables for secrets such as admin credentials and Stripe secret keys. Only values that must be available in the browser should use the `NEXT_PUBLIC_` prefix.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Required variables:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `NEXT_PUBLIC_SITE_NAME`
+- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+- `STRIPE_SECRET_KEY`
 
-## Deploy on Vercel
+## Repository Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `.env.local` is ignored and must never be committed.
+- Build output such as `.next`, `dist`, and `node_modules` is ignored.
+- This repository is intended to stay frontend-focused, with secrets loaded from local environment files or deployment platform settings.

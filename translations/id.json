@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "services": "Layanan",
+    "pricing": "Harga",
+    "contact": "Hubungi Kami",
+    "login": "Masuk",
+    "signup": "Daftar",
+    "dashboard": "Dasbor"
+  },
+  "hero": {
+    "headline": "Perbankan yang Bergerak Bersama Anda",
+    "subheadline": "Rasakan masa depan perbankan dengan AmalCB — alat digital canggih, suku bunga kompetitif, dan layanan personal.",
+    "cta": "Buka Rekening"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Kata Sandi",
+    "login": "Masuk",
+    "forgotPassword": "Lupa kata sandi?",
+    "name": "Nama Lengkap",
+    "confirmPassword": "Konfirmasi Kata Sandi",
+    "signup": "Buat Akun"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "私たちについて",
+    "services": "サービス",
+    "pricing": "料金",
+    "contact": "お問い合わせ",
+    "login": "ログイン",
+    "signup": "新規登録",
+    "dashboard": "ダッシュボード"
+  },
+  "hero": {
+    "headline": "あなたと共に進む銀行",
+    "subheadline": "AmalCBで銀行業務の未来を体験してください — 強力なデジタルツール、競争力のある金利、パーソナライズされたサービス。",
+    "cta": "口座を開設する"
+  },
+  "auth": {
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "login": "ログイン",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "name": "氏名",
+    "confirmPassword": "パスワードの確認",
+    "signup": "アカウント作成"
+  }
+}

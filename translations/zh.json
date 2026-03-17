@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "pricing": "价格",
+    "contact": "联系我们",
+    "login": "登录",
+    "signup": "注册",
+    "dashboard": "控制台"
+  },
+  "hero": {
+    "headline": "与您同行的银行",
+    "subheadline": "通过AmalCB体验未来银行服务——强大的数字化工具、有竞争力的利率和个性化服务。",
+    "cta": "开立账户"
+  },
+  "auth": {
+    "email": "电子邮件",
+    "password": "密码",
+    "login": "登录",
+    "forgotPassword": "忘记密码？",
+    "name": "全名",
+    "confirmPassword": "确认密码",
+    "signup": "创建账户"
+  }
+}
